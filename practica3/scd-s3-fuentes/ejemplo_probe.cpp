@@ -60,7 +60,7 @@ void funcion_impresor( int num_emisores )
       // reservar memoria dinámica para los caracteres (incluyendo 0 al final)
       char * buffer = new char[num_chars_rec+1] ;
 
-      // recibir el mensake en el buffer y añadir un cero al final
+      // recibir el mensaje en el buffer y añadir un cero al final
       // IMPORTANTE: especificar exactamente mismo emisor detectado en el Probe
       MPI_Recv( buffer, num_chars_rec, MPI_CHAR, estado.MPI_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &estado );
       buffer[num_chars_rec] = 0 ;
